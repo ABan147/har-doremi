@@ -1,8 +1,8 @@
 numpy==1.26.2
-torch==2.1.1+cu118
-torchaudio==2.1.1+cu118
+torch==2.1.1
+torchaudio==2.1.1
 torchmetrics==1.5.1
-torchvision==0.16.1+cu118
+torchvision==0.16.1
 tqdm==4.66.1
 transformers==4.42.4
 numba==0.61.0

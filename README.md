@@ -20,14 +20,10 @@ HAR-DoReMi addresses the challenge of domain shift in human activity recognition
 
 ```bash
 # Create a virtual environment with Python 3.10.13
-python3.10.13 -m venv har_doremi_env
+conda create -n har_doremi_env python=3.10.13
 
 # Activate the virtual environment
-# On Linux/macOS:
-source har_doremi_env/bin/activate
-
-# On Windows:
-# har_doremi_env\Scripts\activate
+conda activate har_doremi_env
 ```
 
 ### 2. Clone Repository
