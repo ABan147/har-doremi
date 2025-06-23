@@ -1,8 +1,5 @@
 numpy==1.26.2
-torch==2.1.1
-torchaudio==2.1.1
 torchmetrics==1.5.1
-torchvision==0.16.1
 tqdm==4.66.1
 transformers==4.42.4
 numba==0.61.0
@@ -11,4 +8,7 @@ scipy==1.11.4
 ahrs==0.3.1
 typing_extensions==4.12.2
 matplotlib==3.8.2
+tensorboard==2.17.1
+tensorboard-data-server==0.7.2
+tensorboardX==2.6.2.2
 

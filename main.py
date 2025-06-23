@@ -47,10 +47,10 @@ class TimeSeriesDataset(Dataset):
 def load_data(dataset_name, domain_id, sequence_length):
     """Load dataset from predefined paths."""
     data_paths = {
-        'HHAR': 'har-doremi/datasets/mahony/hhar/data_20_120.npy',
-        'Shoaib': 'har-doremi/datasets/mahony/shoaib/data_20_120.npy',
-        'Motion': 'har-doremi/datasets/mahony/motion/data_20_120.npy',
-        'Uci': 'har-doremi/datasets/mahony/uci/data_20_120.npy',
+        'HHAR': 'har-doremi-main/datasets/mahony/hhar/data_20_120.npy',
+        'Shoaib': 'har-doremi-main/datasets/mahony/shoaib/data_20_120.npy',
+        'Motion': 'har-doremi-main/datasets/mahony/motion/data_20_120.npy',
+        'Uci': 'har-doremi-main/datasets/mahony/uci/data_20_120.npy',
     }
 
     if dataset_name not in data_paths:

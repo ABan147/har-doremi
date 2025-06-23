@@ -36,8 +36,8 @@ cd har-doremi
 ### 3. Install Dependencies
 
 ```bash
-# Upgrade pip to latest version
-pip install --upgrade pip
+# First install pytorch
+pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
 
 # Install required packages
 pip install -r requirements.txt
@@ -50,9 +50,6 @@ pip install -r requirements.txt
 Make sure you have activated the virtual environment, then you can directly run the training script:
 
 ```bash
-# Activate virtual environment
-source har_doremi_env/bin/activate
-
 # Basic training command (using default parameters)
 python main.py
 ```
