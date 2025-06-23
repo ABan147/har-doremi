@@ -1,4 +1,4 @@
-# HAR-DoReMi: Human Activity Recognition with Domain Reweighting
+# HAR-DoReMi: Optimizing Data Mixture for Self-Supervised Human Activity Recognition Across Heterogeneous IMU Datasets
 
 This repository contains the implementation of HAR-DoReMi, a approach for Human Activity Recognition (HAR) that uses the DoReMi (Domain Reweighting with Minimax Optimization) algorithm to handle domain shift in time series data.
 
