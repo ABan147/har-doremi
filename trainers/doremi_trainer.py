@@ -246,8 +246,6 @@ class DoReMiTrainer:
         loss = softdtw(true_data, pred_data)  # Shape: (batch_size,)
         dtw_losses = loss / n_channels  # Average Soft-DTW distance across all channels
 
-        dtw_losses = dtw_losses
-
         return dtw_losses.to(self.args.device, dtype=torch.float32)
 
     def train_reference_model(self, num_epochs=100):

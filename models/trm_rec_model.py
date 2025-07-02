@@ -16,7 +16,7 @@ import torch.nn.functional as F
 class TRMRec(nn.Module):
     """Transformer-based Reconstruction Model for time series data."""
     
-    def __init__(self, n_channels, n_steps, kernel_size=16, stride=4, num_domains=3):
+    def __init__(self, n_channels, n_steps, num_domains=3):
         super(TRMRec, self).__init__()
         self.hidden_dim = 128
 

@@ -89,7 +89,7 @@ def parse_args():
     
     # Data arguments
     parser.add_argument("--domains", type=str, nargs="+", 
-                       default=["HHAR","Motion", "Uci"],
+                       default=[ "HHAR", "Motion","Shoaib"],
                        help="List of domain names to use for training",
                        choices=['HHAR', 'Motion', 'Uci', 'Shoaib'])
     parser.add_argument("--seq_len", type=int, default=120,
@@ -129,7 +129,7 @@ def parse_args():
     
     # DoReMi arguments
     parser.add_argument("--reweight_eta", type=float, default=0.001,
-                       help="Learning rate for domain weight updates")
+                       help="Learning rate for domain weight updates") 
     parser.add_argument("--reweight_eps", type=float, default=0.01,
                        help="Epsilon smoothing for domain weights")
     parser.add_argument("--mse_factor", type=float, default=1.0,
@@ -144,11 +144,7 @@ def parse_args():
                        help="Ratio of time steps to mask (0-100)")
     parser.add_argument("--channel_mask_num", type=int, default=3,
                        help="Number of channels to mask")
-    
-    # Model parameters
-    parser.add_argument("--kernel_size", type=int, default=8,
-                       help="Kernel size for the model")
-    
+
     # Other arguments
     parser.add_argument("--seed", type=int, default=42,
                        help="Random seed")
@@ -183,8 +179,7 @@ def main():
     print("Dataset sizes:", [f"Domain {i}: {len(ds)}" for i, ds in enumerate(datasets)])
 
     # Create models with shared parameters
-    model_params = dict(n_channels=args.num_channels, n_steps=args.seq_len, 
-                       kernel_size=args.kernel_size, num_domains=len(datasets))
+    model_params = dict(n_channels=args.num_channels, n_steps=args.seq_len, num_domains=len(datasets))
     model, reference_model = [TRMRec(**model_params).to(args.device) for _ in range(2)]
 
     # Initialize trainer and start training
